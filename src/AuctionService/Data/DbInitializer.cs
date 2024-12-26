@@ -11,7 +11,7 @@ public class DbInitializer
     {
         using var scope = app.Services.CreateScope();
 
-        SeedData(scope.ServiceProvider.GetService<AuctionDbContext>());
+        SeedData(scope.ServiceProvider.GetService<AuctionDbContext>()!);
     }
 
     private static void SeedData(AuctionDbContext context)
